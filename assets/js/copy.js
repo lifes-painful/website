@@ -1,12 +1,5 @@
 function handleCopyTextFromParagraph() {
-  const body = document.querySelector('body');
+  const cb = navigator.clipboard;
   const paragraph = document.querySelector('p');
-  const area = document.createElement('textarea');
-  body.appendChild(area);
-
-  area.value = paragraph.innerText;
-  area.select();
-  document.execCommand('copy');
-
-  body.removeChild(area);
+  cb.writeText(paragraph.innerText).then(() => alert('Code copied'));
 }
