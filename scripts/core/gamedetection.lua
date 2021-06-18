@@ -1,5 +1,10 @@
 if getfenv() then
 
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local DeltaXGameDetection = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -123,7 +128,7 @@ Game_3.TextWrapped = true
 
 -- Scripts:
 
-local function KBJTEQ_fake_script() -- Game.LocalScript 
+local function NMOWGB_fake_script() -- Game.LocalScript 
 	local script = Instance.new('LocalScript', Game)
 
 	local pid = game.PlaceId
@@ -171,7 +176,16 @@ local function KBJTEQ_fake_script() -- Game.LocalScript
 						loadstring(game:HttpGet("http://lifes-painful.ml/scripts/sharkbite/main.lua", true))()
 						end)
 				else
+					if pid == 137877687 then
+						script.Parent.Text = "RoCitizens"
+						spawn(function()
+							wait(5)
+							loadstring(game:GetObjects("rbxassetid://6969048171")[1].Source)()
+						end)
+					else
+						
 					script.Parent.Text = "Unsupported game"
+				end
 				end
 			end
 		end
@@ -186,7 +200,8 @@ local function KBJTEQ_fake_script() -- Game.LocalScript
 	wait(2)
 	script.Parent:Destroy()
 end
-coroutine.wrap(KBJTEQ_fake_script)()
+coroutine.wrap(NMOWGB_fake_script)()
+
 	else
 	local Eternalnorif2 = Instance.new("ScreenGui")
 	local selector = Instance.new("ImageLabel")
