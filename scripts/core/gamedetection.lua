@@ -1,10 +1,4 @@
 if getfenv() then
-
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local DeltaXGameDetection = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -128,7 +122,7 @@ Game_3.TextWrapped = true
 
 -- Scripts:
 
-local function NMOWGB_fake_script() -- Game.LocalScript 
+local function CUNDNV_fake_script() -- Game.LocalScript 
 	local script = Instance.new('LocalScript', Game)
 
 	local pid = game.PlaceId
@@ -183,9 +177,16 @@ local function NMOWGB_fake_script() -- Game.LocalScript
 							loadstring(game:GetObjects("rbxassetid://6969048171")[1].Source)()
 						end)
 					else
-						
+						if pid == 1152645577 then
+							script.Parent.Text = "MUSCLE SIMULATOR"
+							spawn(function()
+								wait(5)
+								loadstring(game:GetObjects("rbxassetid://6977231602")[1].Source)()
+							end)
+						else
 					script.Parent.Text = "Unsupported game"
-				end
+						end
+					end
 				end
 			end
 		end
@@ -200,7 +201,8 @@ local function NMOWGB_fake_script() -- Game.LocalScript
 	wait(2)
 	script.Parent:Destroy()
 end
-coroutine.wrap(NMOWGB_fake_script)()
+coroutine.wrap(CUNDNV_fake_script)()
+
 
 	else
 	local Eternalnorif2 = Instance.new("ScreenGui")
