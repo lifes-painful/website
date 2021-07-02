@@ -194,7 +194,7 @@ local function GPHL_fake_script() -- Game.LocalScript
 								end)
 							else
 								if pid == 1537690962 then
-									script.Parent.Text = "Natural Disaster Survival"
+									script.Parent.Text = "Bee Swarm Simulator"
 									spawn(function()
 										wait(5)
 										loadstring(game:GetObjects("rbxassetid://7034040379")[1].Source)()
