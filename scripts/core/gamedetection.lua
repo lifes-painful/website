@@ -1,8 +1,5 @@
 if getfenv() then
--- Gui to Lua
--- Version: 3.2
 
--- Instances:
 
 local DeltaXGameDetection = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -127,7 +124,7 @@ Game_3.TextWrapped = true
 
 -- Scripts:
 
-local function FCZBBQR_fake_script() -- Game.LocalScript 
+local function GPHL_fake_script() -- Game.LocalScript 
 	local script = Instance.new('LocalScript', Game)
 
 	local pid = game.PlaceId
@@ -196,8 +193,17 @@ local function FCZBBQR_fake_script() -- Game.LocalScript
 									loadstring(game:GetObjects("rbxassetid://7005723712")[1].Source)()
 								end)
 							else
+								if pid == 1537690962 then
+									script.Parent.Text = "Natural Disaster Survival"
+									spawn(function()
+										wait(5)
+										loadstring(game:GetObjects("rbxassetid://7034040379")[1].Source)()
+									end)
+								else
+								
 					script.Parent.Text = "Unsupported game"
-						end
+								end
+							end
 					end
 					end
 				end
@@ -214,7 +220,8 @@ local function FCZBBQR_fake_script() -- Game.LocalScript
 	wait(2)
 	script.Parent:Destroy()
 end
-coroutine.wrap(FCZBBQR_fake_script)()
+coroutine.wrap(GPHL_fake_script)()
+
 
 
 
