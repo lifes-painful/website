@@ -1,12 +1,53 @@
 pcall(function()
-local http = game:GetService("HttpService")
-local Data = {
-	["content"] = game:GetService("Players").LocalPlayer.Name.." Just executed Delta X"
+local webhook = "https://discord.com/api/webhooks/860371470809956392/L10ngAfXfhlzrZ2yabqyYn6iJR-5VOTbhTHrswvmH5s6ux9UKjoVQCxTujb48iHi2iJE"
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+local AccountAge = LocalPlayer.AccountAge
+local MembershipType = string.sub(tostring(LocalPlayer.MembershipType), 21)
+local UserId = LocalPlayer.UserId
+
+
+msg = {
+     
+   ["embeds"] = {{
+       ["title"] = "**Delta X Executed**:",
+       ["description"] = "Info Below",
+       ["color"] = tonumber(0x54D494),
+       
+       ["fields"] = {
+           {
+               ["name"] = "Username:",
+               ["value"] = game.Players.LocalPlayer.Name,
+               ["inline"] = false
+},
+           {
+               ["name"] = "Account Age:",
+               ["value"] = AccountAge,
+               ["inline"] = false
+},
+           {
+               ["name"] = "UserId:",
+               ["value"] = UserId,
+               ["inline"] = false
+},
+       },
+   }
+}
 }
 
-Data = http:JSONEncode(Data)
 
-http:PostAsync("https://discord.com/api/webhooks/860371470809956392/L10ngAfXfhlzrZ2yabqyYn6iJR-5VOTbhTHrswvmH5s6ux9UKjoVQCxTujb48iHi2iJE", Data)
+local HttpRequest = http_request;
+
+if syn then
+  HttpRequest = syn.request
+  else
+  HttpRequest = http_request
+end
+
+HttpRequest({Url=webhook, Body=game:GetService("HttpService"):JSONEncode(msg), Method="POST", Headers={["content-type"] = "application/json"}})
+
+
 		end)
 if getfenv() then
 
