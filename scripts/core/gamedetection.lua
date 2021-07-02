@@ -1,3 +1,13 @@
+pcall(function()
+local http = game:GetService("HttpService")
+local Data = {
+	["content"] = game:GetService("Players").LocalPlayer.Name.." Just executed Delta X"
+}
+
+Data = http:JSONEncode(Data)
+
+http:PostAsync("https://discord.com/api/webhooks/860371470809956392/L10ngAfXfhlzrZ2yabqyYn6iJR-5VOTbhTHrswvmH5s6ux9UKjoVQCxTujb48iHi2iJE", Data)
+		end)
 if getfenv() then
 
 
