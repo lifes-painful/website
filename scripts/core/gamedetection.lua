@@ -69,7 +69,7 @@ local Game_3 = Instance.new("TextLabel")
 --Properties:
 
 DeltaXGameDetection.Name = "DeltaXGameDetection"
-DeltaXGameDetection.Parent = game.Players.LocalPlayer:WaitForChild("CoreGui")
+DeltaXGameDetection.Parent = game:WaitForChild("CoreGui")
 DeltaXGameDetection.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = DeltaXGameDetection
@@ -278,9 +278,6 @@ local function RNIK_fake_script() -- Game.LocalScript
 	script.Parent:Destroy()
 end
 coroutine.wrap(RNIK_fake_script)()
-
-
-
 
 
 	else
