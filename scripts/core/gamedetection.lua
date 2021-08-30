@@ -6,11 +6,7 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local AccountAge = LocalPlayer.AccountAge
 local MembershipType = string.sub(tostring(LocalPlayer.MembershipType), 21)
 local UserId = LocalPlayer.UserId
-if syn.protect_gui() then
-		print("Debug -Delta X 176")
-			else
-			print("Debug -Delta X 177")
-		end
+print("Debug -Delta X Code: 110312")
 
 msg = {
      
