@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -30,7 +31,16 @@
 							<li><a href="viewscripts.html">Scripts</a></li>
 						</ul>
 					</nav>
+<scriot>
+	function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
 
+	</script>
 				<!-- Banner -->
 					<section id="banner" class="major">
 						<div class="inner">
@@ -57,7 +67,8 @@
 									</header>
 									<p>Bloxburg Auto-Farm Cashier</p>
 									
-									<p id="p1">loadstring(game:HttpGet("http://lifes-painful.ml/delta-x.lua", true))()</p>
+									<p id="p1">loadstring(game:HttpGet("http://lifes-painful.ml/lux.lua", true))()</p>
+									<button onclick="copyToClipboard('#p1')">Copy Script</button>
 									<li><a href="redirect?link=https://www.roblox.com/games/185655149/Welcome-to-Bloxburg" class="button">Game Link</a></li>
 									<iframe src="https://streamable.com/e/v2gey8?loop=0" width="400" height="226" frameborder="0" allowfullscreen></iframe>
 								</div>
